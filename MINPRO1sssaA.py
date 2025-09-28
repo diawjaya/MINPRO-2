@@ -12,7 +12,7 @@ akun = [
 def login():
     try:
         while True:
-            print("|     Login     |")
+            print("-     Login     -")
             username = input("Username: ")
             password = input("Password: ")
 
@@ -25,10 +25,9 @@ def login():
             if password == user["password"]:
                 print("| Login berhasil |")
                 print(f"Role anda: {user['role']}")
-                print("\n\n")
                 return user["role"]
             else:
-                print("| Login gagal |")
+                print("Login gagal")
             return None
     except EOFError:
         print("Input tidak valid")
