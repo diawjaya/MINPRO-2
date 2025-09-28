@@ -17,8 +17,15 @@ Program sederhana berbasis Phyton untuk menyortir paket berdasarkan berat
 
 User bisa mengetik input nomor untuk memilih, jika opsi tidak tersedia maka akan menampilkan "Menu Tidak Tersedia"
 
-<img width="167" height="105" alt="Screenshot 2025-09-14 213527" src="https://github.com/user-attachments/assets/95851f2f-8dcc-45bd-b5d3-b811db7541c4" />
+<img width="201" height="111" alt="{435AD696-9417-40A4-80EF-1FE9D1DC85A7}" src="https://github.com/user-attachments/assets/d419df06-36cb-49aa-9846-343c6e375428" />
 <img width="261" height="47" alt="wada" src="https://github.com/user-attachments/assets/e4ed8d49-3969-423b-b5e0-535bb087ffa1" />
+
+## Opsi Update Password Akun
+
+Admin bisa mengupdate password dari akun yang sudah ada
+
+<img width="655" height="188" alt="{4643E202-24F5-4643-8968-CA960817AFB6}" src="https://github.com/user-attachments/assets/a4c16358-bdb4-4f86-8cae-83c092c86f4d" />
+
 
 ## Opsi Tambah
 > Untuk menambah barang baru kedalam list
@@ -90,7 +97,7 @@ User bisa mengetik input nomor untuk memilih, jika opsi tidak tersedia maka akan
         return False
 ```
 
-Variable berupa list yang berisi elemen nama barang yang dibedakan berdasarkan berat, kemudian menjalankan infinite loop agar menampilkan menu terus menerus hingga user memilih Quit
+Berisi menu navigasi untuk admin
 
 > List Kategori Barang dan Akun
 ```python
@@ -221,13 +228,26 @@ Menampilkan semua list dan barang yang sudah dimasukkan
         print("Dadah ( *・∀・)ノ゛")
         break
 ```
-Saat memilih keluar, Menampilkan pesan Dadah dan menghentikan loop dengan break
+Saat memilih keluar, Menampilkan pesan Dadah dan menghentikan program
 
 ``` python
     else:
         print('[Error, Menu tidak tersedia]')
 ```
 Menampilkan Error saat menu tidak valid dan menampilkan ulang menu utama
+
+> Error Handling
+```python
+    except ValueError:
+            print("input angka")
+
+    except EOFError:
+            print("Input tidak valid")
+
+    except KeyboardInterrupt:
+            print("\nProgram dihentikan paksa")
+```
+Menghandle error-error yang terjadi
 
 # Flochart
 
